@@ -50,12 +50,12 @@ public class Homework {
         try(BufferedReader bf = new BufferedReader(new InputStreamReader(System.in))) {
             text = bf.readLine();
         }catch (IOException e){
-            throw new Exception("Произошла ошибка при работе с консолью");
+            throw new Exception("Ошибка при работе с консолью");
         }
 
         String[] array = text.split(" ");
         if (array.length != 6){
-            throw new Exception("Введено неверное количество параметров");
+            throw new Exception("Неверное количество параметров");
         }
 
         String surname = array[0];
@@ -90,7 +90,7 @@ public class Homework {
             }
             fileWriter.write(String.format("%s %s %s %s %s %s", surname, name, patronymic, format.format(birthdate), phone, sex));
         }catch (IOException e){
-            throw new FileSystemException("Возникла ошибка при работе с файлом");
+            throw new FileSystemException("Ошибка при работе с файлом");
         }
 
     }
